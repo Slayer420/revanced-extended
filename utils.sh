@@ -452,10 +452,6 @@ build_rv() {
 
 	if [ "${args[riplib]}" = true ]; then
 		p_patcher_args+=("--rip-lib x86_64 --rip-lib x86")
-		if [ "$arch" = "arm64-v8a" ]; then
-			p_patcher_args+=("--rip-lib armeabi-v7a")
-		elif [ "$arch" = "arm-v7a" ]; then
-			p_patcher_args+=("--rip-lib arm64-v8a")
 		fi
 	fi
 	if [ "$mode_arg" = module ]; then
